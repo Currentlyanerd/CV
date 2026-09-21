@@ -1,0 +1,259 @@
+:root {
+  --bg: #253736;
+  --card-bg: #203538;
+  --border: #d0d5c8;
+  --text-main: #c0c186;
+  --text-muted: #ffffff;
+  --primary: #3b6255;
+  --accent: #c9862f;
+  --footer-bg: #202c24;
+  --footer-text: #eef0e8;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text-main);
+  background-color: var(--bg);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  color: var(--text-main);
+  margin-bottom: 12px;
+}
+
+p {
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  padding: 60px 20px 5px;
+}
+
+#c {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.nav {
+  position: sticky;
+  top: 0;
+  background-color: #253736;
+  border-bottom: 1px solid var(--border);
+  z-index: 100;
+}
+
+.ncontainer {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar {
+  display: flex;
+  gap: 24px;
+}
+
+.navitem a {
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.navitem a:hover {
+  color: var(--accent);
+}
+
+.aboutcontainer {
+  padding: 60px 20px 60px;
+  background-image: url(./image/Laplace_Resource_Room_BG.webp);
+  background-size: cover;
+  background-position: center;
+}
+
+#about #c {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+#cab {
+  flex: 1;
+}
+
+#cab h1 {
+  font-size: 2rem;
+}
+
+#photo img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--primary);
+}
+
+#cac h2,
+#title h2 {
+  font-size: 1.5rem;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 8px;
+  margin-bottom: 24px;
+}
+
+.progress {
+  border-left: 2px solid var(--primary);
+  padding-left: 24px;
+  margin-left: 8px;
+}
+
+.progress > li {
+  margin-bottom: 28px;
+}
+
+.date .year {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+
+.schooln {
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+}
+
+.schoolc p {
+  font-size: 0.95rem;
+  padding-bottom: 40px;
+}
+
+#projects {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.project {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.projectn {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+footer {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.fcontainer h3 {
+  color: var(--footer-text);
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+}
+
+.fcontainer2 {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.fbutton {
+  background-color: transparent;
+  color: var(--footer-text);
+  border: 1px solid var(--border);
+  padding: 8px 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.fbutton:hover {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
+}
+
+.hambuga {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: var(--text-main);
+}
+
+@media (max-width: 680px) {
+  #about #c {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hambuga {
+    display: block;
+  }
+  
+  .navbar {
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #ffffff;
+    border: 1px solid var(--border);
+    padding: 16px 24px;
+    width: 180px;
+    z-index: 200;
+    }
+
+  .ncontainer {
+    justify-content: center;
+  }
+
+  .navbar.open {
+    display: flex;
+  }
+}
